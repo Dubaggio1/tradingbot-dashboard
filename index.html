@@ -130,6 +130,7 @@ select:focus{outline:none;border-color:var(--blue)}
 
 <div class="tabs">
   <div class="tab on" onclick="go('overview')">Overview</div>
+  <div class="tab" onclick="showSettings()" style="margin-left:auto;font-size:10px;opacity:0.5">⚙</div>
   <div class="tab" onclick="go('specs')">Strategy Specs</div>
   <div class="tab" onclick="go('positions')">Positions</div>
   <div class="tab" onclick="go('tradelog')">Trade Log</div>
@@ -296,7 +297,39 @@ async function initConfig() {
     SB_URL = d.supabase_url; SB_KEY = d.supabase_key;
     localStorage.setItem('sb_url', SB_URL);
     localStorage.setItem('sb_key', SB_KEY);
-  } catch (e) { console.error('Config load failed:', e); }
+  } catch (e) {
+    // Geen server (GitHub Pages) — toon settings prompt
+    if (!SB_URL) showSettings();
+  }
+}
+
+function showSettings() {
+  const cur_url = localStorage.getItem('sb_url') || '';
+  const cur_key = localStorage.getItem('sb_key') || '';
+  const html = '<div style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:999;display:flex;align-items:center;justify-content:center" id="settings-modal">' +
+    '<div style="background:var(--bg2);padding:24px;border-radius:12px;max-width:400px;width:90%">' +
+    '<div style="font-size:14px;font-weight:600;margin-bottom:16px">Supabase Settings</div>' +
+    '<label style="font-size:11px;color:var(--dim)">URL</label>' +
+    '<input id="set-url" value="' + cur_url + '" style="width:100%;padding:8px;margin:4px 0 12px;background:var(--bg);border:1px solid var(--dimmer);border-radius:6px;color:var(--tx);font-size:12px" placeholder="https://xxx.supabase.co">' +
+    '<label style="font-size:11px;color:var(--dim)">Anon Key</label>' +
+    '<input id="set-key" value="' + cur_key + '" style="width:100%;padding:8px;margin:4px 0 16px;background:var(--bg);border:1px solid var(--dimmer);border-radius:6px;color:var(--tx);font-size:11px" placeholder="eyJhbG...">' +
+    '<div style="display:flex;gap:8px">' +
+    '<button onclick="saveSettings()" style="flex:1;padding:8px;background:var(--green);color:#000;border:none;border-radius:6px;font-weight:600;cursor:pointer">Save</button>' +
+    '<button onclick="document.getElementById(\'settings-modal\').remove()" style="padding:8px 16px;background:var(--dimmer);color:var(--tx);border:none;border-radius:6px;cursor:pointer">Cancel</button>' +
+    '</div></div></div>';
+  document.body.insertAdjacentHTML('beforeend', html);
+}
+
+function saveSettings() {
+  const url = document.getElementById('set-url').value.trim();
+  const key = document.getElementById('set-key').value.trim();
+  if (url && key) {
+    localStorage.setItem('sb_url', url);
+    localStorage.setItem('sb_key', key);
+    SB_URL = url; SB_KEY = key;
+    document.getElementById('settings-modal').remove();
+    loadOverview();
+  }
 }
 
 // ── Supabase helper ──
