@@ -116,36 +116,68 @@ select:focus{outline:none;border-color:var(--blue)}
 
 /* ── Mobile responsive ── */
 @media(max-width:600px){
-  body{font-size:12px}
-  .hdr{padding:0 10px;height:auto;flex-wrap:wrap;gap:4px;padding:8px 10px}
-  .logo{font-size:12px}
+  body{font-size:12px;-webkit-text-size-adjust:100%}
+
+  /* Header: compact, alles op 1 rij */
+  .hdr{padding:6px 12px;height:44px;flex-wrap:nowrap}
+  .logo{font-size:13px}
   .logo span{display:none}
-  .hdr-kpis{gap:12px}
-  .hdr-kpi .v{font-size:14px}
-  .hdr-kpi .l{font-size:8px}
-  .hdr-ts{font-size:9px;width:100%;text-align:center;padding-top:2px}
-  .tabs{padding:0 8px;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .tab{padding:8px 10px;font-size:9px;white-space:nowrap;letter-spacing:.04em}
+  .hdr-kpis{gap:14px}
+  .hdr-kpi .v{font-size:15px}
+  .hdr-kpi .l{font-size:7px;letter-spacing:.06em}
+  .hdr-ts{display:none}
+
+  /* Tabs: horizontaal scrollbaar, grotere touch targets */
+  .tabs{padding:0 6px;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:10px 12px;font-size:10px;white-space:nowrap;min-height:38px}
+
+  /* Content */
   .pane{padding:10px 8px}
-  .kpis{gap:6px}
-  .kpi{min-width:70px;padding:8px 6px}
-  .kpi .v{font-size:16px}
+  .ov-grid{grid-template-columns:1fr;gap:10px}
+
+  /* KPI cards: 2x2 grid */
+  .kpis{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .kpi{min-width:0;padding:10px 8px}
+  .kpi .v{font-size:18px}
   .kpi .l{font-size:8px}
-  .ov-grid{grid-template-columns:1fr}
-  table{font-size:10px}
-  th{font-size:8px;padding:6px 4px}
-  td{font-size:10px;padding:5px 4px}
-  .bot{grid-template-columns:8px 1fr 40px 60px 60px;font-size:10px;gap:4px;padding:4px 4px}
-  .specs-table{font-size:9px}
-  .specs-table th{font-size:8px;padding:4px 3px}
-  .specs-table td{font-size:9px;padding:4px 3px}
-  .specs-table .strat-name{font-size:10px}
-  .specs-section{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .card{padding:10px}
-  .badge{font-size:8px;padding:1px 5px}
-  .pos-item{font-size:10px}
-  .alert{padding:8px 10px}
-  select{font-size:10px;padding:5px 8px}
+
+  /* Cards */
+  .card{padding:10px;border-radius:6px}
+
+  /* Tabellen: horizontaal scrollbaar, nette sizing */
+  table{font-size:11px;white-space:nowrap}
+  th{font-size:9px;padding:6px 5px;position:sticky;top:0;background:var(--card);z-index:1}
+  td{font-size:11px;padding:6px 5px}
+
+  /* Bot rows */
+  .bot{grid-template-columns:8px 1fr 45px 65px 65px;font-size:11px;gap:4px;padding:6px 4px;min-height:36px}
+  .grp-hdr h3{font-size:10px}
+
+  /* Specs: horizontaal scrollbaar */
+  .specs-section{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -8px;padding:0 8px}
+  .specs-table{min-width:700px}
+  .specs-table th{font-size:8px;padding:5px 4px}
+  .specs-table td{font-size:10px;padding:6px 4px}
+  .specs-table .strat-name{font-size:11px;text-underline-offset:3px}
+
+  /* Performance grid */
+  .pf-grid{grid-template-columns:1fr;gap:8px}
+
+  /* Posities: card-style */
+  .pos-item{font-size:11px;padding:8px;border-radius:6px;margin-bottom:4px}
+
+  /* Badges */
+  .badge{font-size:9px;padding:2px 6px}
+
+  /* Alerts */
+  .alert{padding:10px 12px;border-radius:6px}
+
+  /* Select */
+  select{font-size:11px;padding:8px 10px;border-radius:8px;width:100%;margin-bottom:8px}
+
+  /* SVG equity curve responsive */
+  #pf-eq svg{max-width:100%;height:auto}
 }
 </style>
 </head>
