@@ -209,7 +209,7 @@ select:focus{outline:none;border-color:var(--blue)}
         <tr class="new-build"><td class="strat-name">ZCT 1m TS V2</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>3.0</td><td>EoO=8</td><td>2-traps</td><td>20x</td><td>$1k</td><td>No</td></tr>
         <tr class="new-build"><td class="strat-name">ZCT 1m LO</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>1.5</td><td>None</td><td>Limit Order entry</td><td>20x</td><td>$1k</td><td>No</td></tr>
         <tr><td class="strat-name">ZCT V2 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>0.51</td><td>1b LO</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">ZCT Wide 30m</td><td>Crypto</td><td>22 proven coins</td><td>22</td><td>30m</td><td>0.5</td><td>2b (1h)</td><td>Trail 0.5R/0.3R + BTC macro</td><td>20x</td><td>$1k</td><td>No</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT Wide 30m</td><td>Crypto</td><td>22 proven coins</td><td>22</td><td>30m</td><td>0.5</td><td>2b (1h)</td><td>Trail 0.5R/0.3R + BTC macro</td><td>20x</td><td>$5k</td><td>No</td></tr>
         <tr><td class="strat-name">ZCT MR 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>2.0</td><td>4 bars</td><td>Reversal</td><td>20x</td><td>$10k</td><td>No</td></tr>
         <tr><td class="strat-name">ZCT MR 1m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>1m</td><td>2.0</td><td>8 bars</td><td>Reversal</td><td>20x</td><td>$10k</td><td>No</td></tr>
         <tr class="new-build"><td class="strat-name">ZCT V2 Base</td><td>Crypto</td><td>8 MR coins</td><td>8</td><td>1m</td><td>MR SHORT</td><td>TS=60</td><td>S/R</td><td>5x</td><td>$1k</td><td>No</td></tr>
@@ -423,7 +423,11 @@ function getFx(sym) {
 
 function calcFee(sym, entryP, qty) {
   const isCrypto = (sym || '').includes('/');
-  const commRate = isCrypto ? 0.0006 : 0.001;
+  let commRate;
+  if (isCrypto) commRate = 0.0006;
+  else if (['.T','.HK','.KS','.AX'].some(s => (sym||'').endsWith(s))) commRate = 0.0018;
+  else if (['.AS','.DE','.PA','.MI','.L','.ST','.CO','.SW','.HE'].some(s => (sym||'').endsWith(s))) commRate = 0.0013;
+  else commRate = 0.00005;
   const fx = getFx(sym);
   const notionalUSD = (entryP || 0) * (qty || 0) * fx;
   return notionalUSD > 0 ? Math.round(notionalUSD * commRate * 2 * 100) / 100 : 0;
