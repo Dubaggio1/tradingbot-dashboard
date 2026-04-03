@@ -113,72 +113,6 @@ select:focus{outline:none;border-color:var(--blue)}
 /* Progress bar */
 .prog{width:100%;height:3px;background:var(--dimmer);border-radius:2px;overflow:hidden}
 .prog-f{height:100%;border-radius:2px}
-
-/* ── Mobile responsive ── */
-@media(max-width:600px){
-  body{font-size:12px;-webkit-text-size-adjust:100%}
-
-  /* Header: compact, alles op 1 rij */
-  .hdr{padding:6px 12px;height:44px;flex-wrap:nowrap}
-  .logo{font-size:13px}
-  .logo span{display:none}
-  .hdr-kpis{gap:14px}
-  .hdr-kpi .v{font-size:15px}
-  .hdr-kpi .l{font-size:7px;letter-spacing:.06em}
-  .hdr-ts{display:none}
-
-  /* Tabs: horizontaal scrollbaar, grotere touch targets */
-  .tabs{padding:0 6px;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .tabs::-webkit-scrollbar{display:none}
-  .tab{padding:10px 12px;font-size:10px;white-space:nowrap;min-height:38px}
-
-  /* Content */
-  .pane{padding:10px 8px}
-  .ov-grid{grid-template-columns:1fr;gap:10px}
-
-  /* KPI cards: 2x2 grid */
-  .kpis{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-  .kpi{min-width:0;padding:8px 6px;overflow:hidden}
-  .kpi .v{font-size:13px;word-break:break-all}
-  .kpi .l{font-size:7px}
-
-  /* Cards */
-  .card{padding:10px;border-radius:6px}
-
-  /* Tabellen: horizontaal scrollbaar, nette sizing */
-  table{font-size:11px;white-space:nowrap}
-  th{font-size:9px;padding:6px 5px;position:sticky;top:0;background:var(--card);z-index:1}
-  td{font-size:11px;padding:6px 5px}
-
-  /* Bot rows */
-  .bot{grid-template-columns:8px 1fr 45px 65px 65px;font-size:11px;gap:4px;padding:6px 4px;min-height:36px}
-  .grp-hdr h3{font-size:10px}
-
-  /* Specs: horizontaal scrollbaar */
-  .specs-section{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -8px;padding:0 8px}
-  .specs-table{min-width:700px}
-  .specs-table th{font-size:8px;padding:5px 4px}
-  .specs-table td{font-size:10px;padding:6px 4px}
-  .specs-table .strat-name{font-size:11px;text-underline-offset:3px}
-
-  /* Performance grid */
-  .pf-grid{grid-template-columns:1fr;gap:8px}
-
-  /* Posities: card-style */
-  .pos-item{font-size:11px;padding:8px;border-radius:6px;margin-bottom:4px}
-
-  /* Badges */
-  .badge{font-size:9px;padding:2px 6px}
-
-  /* Alerts */
-  .alert{padding:10px 12px;border-radius:6px}
-
-  /* Select */
-  select{font-size:11px;padding:8px 10px;border-radius:8px;width:100%;margin-bottom:8px}
-
-  /* SVG equity curve responsive */
-  #pf-eq svg{max-width:100%;height:auto}
-}
 </style>
 </head>
 <body>
@@ -196,7 +130,6 @@ select:focus{outline:none;border-color:var(--blue)}
 
 <div class="tabs">
   <div class="tab on" onclick="go('overview')">Overview</div>
-  <div class="tab" onclick="showSettings()" style="margin-left:auto;font-size:10px;opacity:0.5">⚙</div>
   <div class="tab" onclick="go('specs')">Strategy Specs</div>
   <div class="tab" onclick="go('positions')">Positions</div>
   <div class="tab" onclick="go('tradelog')">Trade Log</div>
@@ -271,20 +204,14 @@ select:focus{outline:none;border-color:var(--blue)}
         <tr><td class="strat-name">ZCT V2 Paper</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>n/a</td><td>TS</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
         <tr><td class="strat-name">ZCT V2 Logger</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>Observe</td><td>No</td></tr>
         <tr class="new-build"><td class="strat-name">ZCT Alpha 15m</td><td>Crypto</td><td>Phemex</td><td>135</td><td>15m</td><td>None</td><td>4b (60m)</td><td>Evolved 0.5R + Trail 0.3R</td><td>20x</td><td>$6k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">ZCT Alpha 1m</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>None</td><td>5b (5m)</td><td>Evolved 0.5R + Trail 0.3R</td><td>20x</td><td>$6k</td><td>No</td></tr>
         <tr><td class="strat-name">ZCT Spike 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>0.51</td><td>1b LO</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
         <tr class="new-build"><td class="strat-name">ZCT 1m Market</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>1.0</td><td>EoO=10</td><td>2-traps (0.5R/-0.2R, 0.9R/BE)</td><td>20x</td><td>$1k</td><td>No</td></tr>
         <tr class="new-build"><td class="strat-name">ZCT 1m TS V2</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>3.0</td><td>EoO=8</td><td>2-traps</td><td>20x</td><td>$1k</td><td>No</td></tr>
         <tr class="new-build"><td class="strat-name">ZCT 1m LO</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>1.5</td><td>None</td><td>Limit Order entry</td><td>20x</td><td>$1k</td><td>No</td></tr>
         <tr><td class="strat-name">ZCT V2 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>0.51</td><td>1b LO</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT V2 1m 075</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>1m</td><td>0.75</td><td>None</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT V2 1m 100</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>1m</td><td>1.0</td><td>None</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT Wide 15m</td><td>Crypto</td><td>Phemex (all)</td><td>80+</td><td>15m</td><td>1.0</td><td>1b LO</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT Wide 1m</td><td>Crypto</td><td>Phemex (all)</td><td>80+</td><td>1m</td><td>1.0</td><td>None</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT Wide 30m</td><td>Crypto</td><td>22 proven coins</td><td>22</td><td>30m</td><td>0.5</td><td>2b (1h)</td><td>Trail 0.5R/0.3R + BTC macro</td><td>20x</td><td>$1k</td><td>No</td></tr>
         <tr><td class="strat-name">ZCT MR 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>2.0</td><td>4 bars</td><td>Reversal</td><td>20x</td><td>$10k</td><td>No</td></tr>
         <tr><td class="strat-name">ZCT MR 1m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>1m</td><td>2.0</td><td>8 bars</td><td>Reversal</td><td>20x</td><td>$10k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT 1m 075</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>0.75</td><td>None</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT 1m 100</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>1.0</td><td>None</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
         <tr class="new-build"><td class="strat-name">ZCT V2 Base</td><td>Crypto</td><td>8 MR coins</td><td>8</td><td>1m</td><td>MR SHORT</td><td>TS=60</td><td>S/R</td><td>5x</td><td>$1k</td><td>No</td></tr>
         <tr class="new-build"><td class="strat-name">ZCT V2 Funding</td><td>Crypto</td><td>8 MR coins</td><td>8</td><td>1m</td><td>MR SHORT</td><td>TS=60</td><td>Spike + Funding>0</td><td>5x</td><td>$1k</td><td>No</td></tr>
         <tr><td class="strat-name">ZCT V2 Logger</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>Observe</td><td>No</td></tr>
@@ -339,14 +266,17 @@ let SB_URL = '', SB_KEY = '';
 
 // Stopped strategies — gefilterd uit alle dashboard tabs
 const STOPPED_PREFIXES = [
+  // ZCT EQ (alle gestopt)
   'zct_eq3_','zct_eq4_','zct_eq5_','zct_eq6_','zct_eq7_','zct_eq8_',
-  'zct_eq_v3','zct_5m_defi','zct_zec_3m','zct_midcap',
-  'zct_1m_paper',
-  'zct_paper_40x','zct_live',
+  'zct_eq_v3','zct_eq2_',
+  // ZCT crypto gestopt
+  'zct_5m_defi','zct_zec_3m','zct_midcap','zct_zec_1m',
+  'zct_1m_paper','zct_paper_40x','zct_live','zct_1m_ts_live',
   'zct_spike_1m_075','zct_spike_1m_100',
   'zct_v2_1m_075','zct_v2_1m_100',
-  'zct_alpha_1m','zct_wide_1m',
-  'momo_v4_eu','momo_v4_asia','zct_1m_ts_live','zct_zec_1m',
+  'zct_alpha_1m','zct_wide_1m','zct_wide_15m',
+  // MOMO gestopt
+  'momo_v4_eu','momo_v4_asia',
 ];
 function isStopped(strategy) {
   if (!strategy) return false;
@@ -363,39 +293,7 @@ async function initConfig() {
     SB_URL = d.supabase_url; SB_KEY = d.supabase_key;
     localStorage.setItem('sb_url', SB_URL);
     localStorage.setItem('sb_key', SB_KEY);
-  } catch (e) {
-    // Geen server (GitHub Pages) — toon settings prompt
-    if (!SB_URL) showSettings();
-  }
-}
-
-function showSettings() {
-  const cur_url = localStorage.getItem('sb_url') || '';
-  const cur_key = localStorage.getItem('sb_key') || '';
-  const html = '<div style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:999;display:flex;align-items:center;justify-content:center" id="settings-modal">' +
-    '<div style="background:var(--bg2);padding:24px;border-radius:12px;max-width:400px;width:90%">' +
-    '<div style="font-size:14px;font-weight:600;margin-bottom:16px">Supabase Settings</div>' +
-    '<label style="font-size:11px;color:var(--dim)">URL</label>' +
-    '<input id="set-url" value="' + cur_url + '" style="width:100%;padding:8px;margin:4px 0 12px;background:var(--bg);border:1px solid var(--dimmer);border-radius:6px;color:var(--tx);font-size:12px" placeholder="https://xxx.supabase.co">' +
-    '<label style="font-size:11px;color:var(--dim)">Anon Key</label>' +
-    '<input id="set-key" value="' + cur_key + '" style="width:100%;padding:8px;margin:4px 0 16px;background:var(--bg);border:1px solid var(--dimmer);border-radius:6px;color:var(--tx);font-size:11px" placeholder="eyJhbG...">' +
-    '<div style="display:flex;gap:8px">' +
-    '<button onclick="saveSettings()" style="flex:1;padding:8px;background:var(--green);color:#000;border:none;border-radius:6px;font-weight:600;cursor:pointer">Save</button>' +
-    '<button onclick="document.getElementById(\'settings-modal\').remove()" style="padding:8px 16px;background:var(--dimmer);color:var(--tx);border:none;border-radius:6px;cursor:pointer">Cancel</button>' +
-    '</div></div></div>';
-  document.body.insertAdjacentHTML('beforeend', html);
-}
-
-function saveSettings() {
-  const url = document.getElementById('set-url').value.trim();
-  const key = document.getElementById('set-key').value.trim();
-  if (url && key) {
-    localStorage.setItem('sb_url', url);
-    localStorage.setItem('sb_key', key);
-    SB_URL = url; SB_KEY = key;
-    document.getElementById('settings-modal').remove();
-    loadOverview();
-  }
+  } catch (e) { console.error('Config load failed:', e); }
 }
 
 // ── Supabase helper ──
@@ -483,6 +381,7 @@ const SPEC_TO_KEY = {
   'ZCT V2 15m': 'zct_v2_15m',
   'ZCT V2 1m 075': 'zct_v2_1m_075',
   'ZCT V2 1m 100': 'zct_v2_1m_100',
+  'ZCT Wide 30m': 'zct_wide_30m',
   'ZCT Wide 15m': 'zct_wide_15m',
   'ZCT Wide 1m': 'zct_wide_1m',
   'ZCT MR 15m': 'zct_mr_15m',
