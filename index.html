@@ -158,36 +158,36 @@ select:focus{outline:none;border-color:var(--blue)}
     <h4>Other Equity</h4>
     <div style="overflow-x:auto">
     <table class="specs-table">
-      <thead><tr><th>Strategy</th><th>Type</th><th>Universe</th><th># Stocks</th><th>TF</th><th>RR</th><th>Time Stop</th><th>SL</th><th>Leverage</th><th>Capital</th><th>Compound</th></tr></thead>
+      <thead><tr><th>Strategy</th><th>Type</th><th>Universe</th><th># Stocks</th><th>TF</th><th>RR</th><th>Time Stop</th><th>SL</th><th>Leverage</th><th>Capital</th><th>Compound</th><th>Since</th></tr></thead>
       <tbody>
-        <tr><td class="strat-name">CS-MOM V2</td><td>Equity</td><td>US Momentum</td><td>323</td><td>1D</td><td>n/a</td><td>Momentum</td><td>Trailing</td><td>1x</td><td>$50k</td><td>No</td></tr>
-        <tr><td class="strat-name">VolRegime EQ</td><td>Equity</td><td>Index</td><td>2 (SPY, QQQ)</td><td>1D</td><td>n/a</td><td>Regime</td><td>Vol-scaled</td><td>1x</td><td>$50k</td><td>No</td></tr>
-        <tr><td class="strat-name">MOMO EQ US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>15m</td><td>2.0</td><td>None</td><td>Pivot SL</td><td>2x</td><td>$50k x3</td><td>No</td></tr>
-        <tr><td class="strat-name">MOMO EQ EU</td><td>Equity</td><td>EU Large Cap</td><td>61</td><td>15m</td><td>2.0</td><td>None</td><td>Pivot SL</td><td>2x</td><td>$50k x3</td><td>No</td></tr>
-        <tr><td class="strat-name">MOMO EQ Asia</td><td>Equity</td><td>Asia Large Cap</td><td>37</td><td>15m</td><td>1.5</td><td>4 bars</td><td>Pivot SL</td><td>2x</td><td>$50k x3</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO EQ V2A US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>15m</td><td>2.4</td><td>4b (1h)</td><td>Evolved 0.3R + Trail 0.2R</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO EQ V2A EU</td><td>Equity</td><td>EU Large Cap</td><td>55</td><td>15m</td><td>2.4</td><td>4b (1h)</td><td>Evolved 0.3R + Trail 0.2R</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO EQ V2B US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>15m</td><td>2.4</td><td>26b (6.5h)</td><td>Evolved 0.7R + Trail 0.2R</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO EQ V2B EU</td><td>Equity</td><td>EU Large Cap</td><td>55</td><td>15m</td><td>2.4</td><td>26b (6.5h)</td><td>Evolved 0.7R + Trail 0.2R</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr><td class="strat-name">MOMO OPT US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>1H</td><td>3.0</td><td>4 bars</td><td>Evolved R</td><td>2x</td><td>$50k x3</td><td>No</td></tr>
-        <tr><td class="strat-name">MOMO OPT EU</td><td>Equity</td><td>EU Large Cap</td><td>61</td><td>1H</td><td>2.0</td><td>8 bars</td><td>Evolved R</td><td>2x</td><td>$50k x3</td><td>No</td></tr>
-        <tr><td class="strat-name">MOMO OPT Asia</td><td>Equity</td><td>Asia Large Cap</td><td>37</td><td>1H</td><td>1.5</td><td>4 bars</td><td>Evolved R</td><td>2x</td><td>$50k x3</td><td>No</td></tr>
-        <tr><td class="strat-name">MOMO OPT LIVE</td><td>Equity</td><td>US Large Cap</td><td>36</td><td>1H</td><td>3.0</td><td>4 bars</td><td>Evolved R</td><td>2x</td><td>€11,400</td><td>LIVE</td></tr>
-        <tr><td class="strat-name">MOMO V3 US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>1H</td><td>8.0</td><td>1 bar</td><td>Fixed SL</td><td>1-2x</td><td>$50k x2</td><td>No</td></tr>
-        <tr><td class="strat-name">MOMO V3 EU</td><td>Equity</td><td>EU Large Cap</td><td>61</td><td>1H</td><td>5.0</td><td>1 bar</td><td>Fixed SL</td><td>1-2x</td><td>$50k x2</td><td>No</td></tr>
-        <tr><td class="strat-name">MOMO V3 Asia</td><td>Equity</td><td>Asia Large Cap</td><td>37</td><td>1H</td><td>8.0</td><td>1 bar</td><td>Fixed SL</td><td>1-2x</td><td>$50k x2</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO OPT V2 US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>1H</td><td>Signal</td><td>2h clock</td><td>Evolved 0.5R + Trail 0.3R</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO OPT V2 EU</td><td>Equity</td><td>EU Large Cap</td><td>55</td><td>1H</td><td>Signal</td><td>2h clock</td><td>Evolved 0.5R + Trail 0.3R</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO OPT V2 Asia</td><td>Equity</td><td>Asia ADRs</td><td>10</td><td>1H</td><td>Signal</td><td>2h clock</td><td>Evolved 0.5R + Trail 0.3R</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO V4 US</td><td>Equity</td><td>US Large Cap</td><td>36</td><td>1H</td><td>3.0</td><td>TS + Trail</td><td>Evolved 0.5R + Trail 0.3R</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO COMP US</td><td>Equity</td><td>US Large Cap</td><td>36</td><td>1H</td><td>3.0</td><td>4 bars</td><td>Composite (SPY+VIX+Breadth)</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO COMP EU</td><td>Equity</td><td>EU Large Cap</td><td>64</td><td>1H</td><td>2.0</td><td>8 bars</td><td>Composite (SPY+VIX+Breadth)</td><td>2x</td><td>$50k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO OPT LIVE EU</td><td>Equity</td><td>EU Large Cap</td><td>62</td><td>1H</td><td>2.0</td><td>8 bars</td><td>Evolved R + FX</td><td>2x</td><td>€11,400</td><td>LIVE</td></tr>
-        <tr class="new-build"><td class="strat-name">FFR US</td><td>Equity</td><td>US Large Cap</td><td>36</td><td>1D/1H</td><td>5.0</td><td>None</td><td>SL 1.5% (SHORT only)</td><td>2x</td><td>$7,500</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO OPT Combined</td><td>Equity</td><td>US Large+Mid</td><td>228</td><td>1H</td><td>3.0</td><td>4 bars</td><td>Trail 0.5R/0.3R + Macro</td><td>2x</td><td>$25k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO OPT Mid-Cap</td><td>Equity</td><td>US Mid-Cap</td><td>68</td><td>1H</td><td>2.0</td><td>1 bar</td><td>Trail 0.5R/0.3R + Macro</td><td>2x</td><td>$25k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO MC LIVE</td><td>Equity</td><td>US Mid-Cap</td><td>68</td><td>1H</td><td>2.0</td><td>1 bar</td><td>Trail 0.5R/0.3R + Macro</td><td>2x</td><td>$5,000</td><td>LIVE</td></tr>
-        <tr class="new-build"><td class="strat-name">FFR Mid-Cap</td><td>Equity</td><td>US Mid-Cap</td><td>68</td><td>15m</td><td>0.5</td><td>None</td><td>Trail 0.5R/0.3R (SHORT only)</td><td>3x</td><td>$7,500</td><td>No</td></tr>
+        <tr><td class="strat-name">CS-MOM V2</td><td>Equity</td><td>US Momentum</td><td>323</td><td>1D</td><td>n/a</td><td>Momentum</td><td>Trailing</td><td>1x</td><td>$50k</td><td>No</td><td class="d">20 mar</td></tr>
+        <tr><td class="strat-name">VolRegime EQ</td><td>Equity</td><td>Index</td><td>2 (SPY, QQQ)</td><td>1D</td><td>n/a</td><td>Regime</td><td>Vol-scaled</td><td>1x</td><td>$50k</td><td>No</td><td class="d">20 mar</td></tr>
+        <tr><td class="strat-name">MOMO EQ US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>15m</td><td>2.0</td><td>None</td><td>Pivot SL</td><td>2x</td><td>$50k x3</td><td>No</td><td class="d">20 mar</td></tr>
+        <tr><td class="strat-name">MOMO EQ EU</td><td>Equity</td><td>EU Large Cap</td><td>61</td><td>15m</td><td>2.0</td><td>None</td><td>Pivot SL</td><td>2x</td><td>$50k x3</td><td>No</td><td class="d">20 mar</td></tr>
+        <tr><td class="strat-name">MOMO EQ Asia</td><td>Equity</td><td>Asia Large Cap</td><td>37</td><td>15m</td><td>1.5</td><td>4 bars</td><td>Pivot SL</td><td>2x</td><td>$50k x3</td><td>No</td><td class="d">20 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO EQ V2A US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>15m</td><td>2.4</td><td>4b (1h)</td><td>Evolved 0.3R + Trail 0.2R</td><td>2x</td><td>$50k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO EQ V2A EU</td><td>Equity</td><td>EU Large Cap</td><td>55</td><td>15m</td><td>2.4</td><td>4b (1h)</td><td>Evolved 0.3R + Trail 0.2R</td><td>2x</td><td>$50k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO EQ V2B US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>15m</td><td>2.4</td><td>26b (6.5h)</td><td>Evolved 0.7R + Trail 0.2R</td><td>2x</td><td>$50k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO EQ V2B EU</td><td>Equity</td><td>EU Large Cap</td><td>55</td><td>15m</td><td>2.4</td><td>26b (6.5h)</td><td>Evolved 0.7R + Trail 0.2R</td><td>2x</td><td>$50k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr><td class="strat-name">MOMO OPT US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>1H</td><td>3.0</td><td>4 bars</td><td>Evolved R</td><td>2x</td><td>$50k x3</td><td>No</td><td class="d">20 mar</td></tr>
+        <tr><td class="strat-name">MOMO OPT EU</td><td>Equity</td><td>EU Large Cap</td><td>61</td><td>1H</td><td>2.0</td><td>8 bars</td><td>Evolved R</td><td>2x</td><td>$50k x3</td><td>No</td><td class="d">20 mar</td></tr>
+        <tr><td class="strat-name">MOMO OPT Asia</td><td>Equity</td><td>JP+HK+AU</td><td>33</td><td>1H</td><td>1.5</td><td>4 bars</td><td>Evolved R</td><td>2x</td><td>$50k x3</td><td>No</td><td class="d">20 mar</td></tr>
+        <tr><td class="strat-name">MOMO OPT LIVE</td><td>Equity</td><td>US Large Cap</td><td>36</td><td>1H</td><td>3.0</td><td>4 bars</td><td>Evolved R</td><td>2x</td><td>€11,400</td><td>LIVE</td><td class="d">28 mar</td></tr>
+        <tr><td class="strat-name">MOMO V3 US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>1H</td><td>8.0</td><td>1 bar</td><td>Fixed SL</td><td>1-2x</td><td>$50k x2</td><td>No</td><td class="d">24 mar</td></tr>
+        <tr><td class="strat-name">MOMO V3 EU</td><td>Equity</td><td>EU Large Cap</td><td>61</td><td>1H</td><td>5.0</td><td>1 bar</td><td>Fixed SL</td><td>1-2x</td><td>$50k x2</td><td>No</td><td class="d">24 mar</td></tr>
+        <tr><td class="strat-name">MOMO V3 Asia</td><td>Equity</td><td>Asia Large Cap</td><td>37</td><td>1H</td><td>8.0</td><td>1 bar</td><td>Fixed SL</td><td>1-2x</td><td>$50k x2</td><td>No</td><td class="d">24 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO OPT V2 US</td><td>Equity</td><td>US Large Cap</td><td>30</td><td>1H</td><td>Signal</td><td>2h clock</td><td>Evolved 0.5R + Trail 0.3R</td><td>2x</td><td>$50k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO OPT V2 EU</td><td>Equity</td><td>EU Large Cap</td><td>55</td><td>1H</td><td>Signal</td><td>2h clock</td><td>Evolved 0.5R + Trail 0.3R</td><td>2x</td><td>$50k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO OPT V2 Asia</td><td>Equity</td><td>Asia ADRs</td><td>10</td><td>1H</td><td>Signal</td><td>2h clock</td><td>Evolved 0.5R + Trail 0.3R</td><td>2x</td><td>$50k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO V4 US</td><td>Equity</td><td>US Large Cap</td><td>36</td><td>1H</td><td>3.0</td><td>TS + Trail</td><td>Evolved 0.5R + Trail 0.3R</td><td>2x</td><td>$50k</td><td>No</td><td class="d">30 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO COMP US</td><td>Equity</td><td>US Large Cap</td><td>36</td><td>1H</td><td>3.0</td><td>4 bars</td><td>Composite (SPY+VIX+Breadth)</td><td>2x</td><td>$50k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO COMP EU</td><td>Equity</td><td>EU Large Cap</td><td>64</td><td>1H</td><td>2.0</td><td>8 bars</td><td>Composite (SPY+VIX+Breadth)</td><td>2x</td><td>$50k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO OPT LIVE EU</td><td>Equity</td><td>EU Large Cap</td><td>62</td><td>1H</td><td>2.0</td><td>8 bars</td><td>Evolved R + FX</td><td>2x</td><td>€11,400</td><td>LIVE</td><td class="d">1 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">FFR US</td><td>Equity</td><td>US Large Cap</td><td>36</td><td>1D/1H</td><td>5.0</td><td>None</td><td>SL 1.5% (SHORT only)</td><td>2x</td><td>$7,500</td><td>No</td><td class="d">1 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO OPT Combined</td><td>Equity</td><td>US Large+Mid</td><td>228</td><td>1H</td><td>3.0</td><td>4 bars</td><td>Trail 0.5R/0.3R + Macro</td><td>2x</td><td>$25k</td><td>No</td><td class="d">2 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO OPT Mid-Cap</td><td>Equity</td><td>US Mid-Cap</td><td>68</td><td>1H</td><td>2.0</td><td>1 bar</td><td>Trail 0.5R/0.3R + Macro</td><td>2x</td><td>$25k</td><td>No</td><td class="d">2 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO MC LIVE</td><td>Equity</td><td>US Mid-Cap</td><td>68</td><td>1H</td><td>2.0</td><td>1 bar</td><td>Trail 0.5R/0.3R + Macro</td><td>2x</td><td>$5,000</td><td>LIVE</td><td class="d">2 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">FFR Mid-Cap</td><td>Equity</td><td>US Mid-Cap</td><td>68</td><td>15m</td><td>0.5</td><td>None</td><td>Trail 0.5R/0.3R (SHORT only)</td><td>3x</td><td>$7,500</td><td>No</td><td class="d">2 apr</td></tr>
       </tbody>
     </table>
     </div>
@@ -197,29 +197,30 @@ select:focus{outline:none;border-color:var(--blue)}
     <h4>Crypto</h4>
     <div style="overflow-x:auto">
     <table class="specs-table">
-      <thead><tr><th>Strategy</th><th>Type</th><th>Universe</th><th># Coins</th><th>TF</th><th>RR</th><th>Time Stop</th><th>SL</th><th>Leverage</th><th>Capital</th><th>Compound</th></tr></thead>
+      <thead><tr><th>Strategy</th><th>Type</th><th>Universe</th><th># Coins</th><th>TF</th><th>RR</th><th>Time Stop</th><th>SL</th><th>Leverage</th><th>Capital</th><th>Compound</th><th>Since</th></tr></thead>
       <tbody>
-        <tr><td class="strat-name">MOMO Crypto</td><td>Crypto</td><td>Large Cap</td><td>24</td><td>15m</td><td>2.31</td><td>3 bars</td><td>Swing H/L</td><td>10-40x</td><td>$15k x3</td><td>No</td></tr>
-        <tr><td class="strat-name">Trend FLIP</td><td>Crypto</td><td>SOL/SEI/SUI/ZEC</td><td>4</td><td>1m</td><td>n/a</td><td>Trend</td><td>Flip</td><td>1x</td><td>$1.4k</td><td>LIVE</td></tr>
-        <tr><td class="strat-name">ZCT V2 Paper</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>n/a</td><td>TS</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT V2 Logger</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>Observe</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">ZCT Alpha 15m</td><td>Crypto</td><td>Phemex</td><td>135</td><td>15m</td><td>None</td><td>4b (60m)</td><td>Evolved 0.5R + Trail 0.3R</td><td>20x</td><td>$6k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT Spike 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>0.51</td><td>1b LO</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">ZCT 1m Market</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>1.0</td><td>EoO=10</td><td>2-traps (0.5R/-0.2R, 0.9R/BE)</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">ZCT 1m TS V2</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>3.0</td><td>EoO=8</td><td>2-traps</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">ZCT 1m LO</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>1.5</td><td>None</td><td>Limit Order entry</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT V2 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>0.51</td><td>1b LO</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO OC Top28</td><td>Crypto</td><td>Top 28 coins</td><td>28</td><td>30m</td><td>5.0</td><td>16b (8h)</td><td>BTC macro, MO entry</td><td>20x</td><td>$5k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO OC Strong65</td><td>Crypto</td><td>Strong 65 coins</td><td>65</td><td>30m</td><td>5.0</td><td>16b (8h)</td><td>BTC macro, MO entry</td><td>20x</td><td>$5k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">MOMO OC GO</td><td>Crypto</td><td>All coins</td><td>100+</td><td>30m</td><td>5.0</td><td>16b (8h)</td><td>BTC macro, MO entry</td><td>20x</td><td>$5k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">ZCT Wide 30m</td><td>Crypto</td><td>22 proven coins</td><td>22</td><td>30m</td><td>0.5</td><td>2b (1h)</td><td>Trail 0.5R/0.3R + BTC macro</td><td>20x</td><td>$5k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT MR 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>2.0</td><td>4 bars</td><td>Reversal</td><td>20x</td><td>$10k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT MR 1m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>1m</td><td>2.0</td><td>8 bars</td><td>Reversal</td><td>20x</td><td>$10k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">ZCT V2 Base</td><td>Crypto</td><td>8 MR coins</td><td>8</td><td>1m</td><td>MR SHORT</td><td>TS=60</td><td>S/R</td><td>5x</td><td>$1k</td><td>No</td></tr>
-        <tr class="new-build"><td class="strat-name">ZCT V2 Funding</td><td>Crypto</td><td>8 MR coins</td><td>8</td><td>1m</td><td>MR SHORT</td><td>TS=60</td><td>Spike + Funding>0</td><td>5x</td><td>$1k</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT V2 Logger</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>Observe</td><td>No</td></tr>
-        <tr><td class="strat-name">ZCT Signal Logger</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>1m</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>Observe</td><td>No</td></tr>
-        <tr><td class="strat-name">PORT10K</td><td>Crypto</td><td>Mixed</td><td>58</td><td>Multi</td><td>Varied</td><td>Varied</td><td>Varied</td><td>4-20x</td><td>$50k</td><td>No</td></tr>
+        <tr><td class="strat-name">MOMO Crypto</td><td>Crypto</td><td>Large Cap</td><td>24</td><td>15m</td><td>2.31</td><td>3 bars</td><td>Swing H/L</td><td>10-40x</td><td>$15k x3</td><td>No</td><td class="d">15 mar</td></tr>
+        <tr><td class="strat-name">Trend FLIP</td><td>Crypto</td><td>SOL/SEI/SUI/ZEC</td><td>4</td><td>1m</td><td>n/a</td><td>Trend</td><td>Flip</td><td>1x</td><td>$1.4k</td><td>LIVE</td><td class="d">26 mar</td></tr>
+        <tr><td class="strat-name">ZCT V2 Paper</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>n/a</td><td>TS</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td><td class="d">-</td></tr>
+        <tr><td class="strat-name">ZCT V2 Logger</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>Observe</td><td>No</td><td class="d">-</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT Alpha 15m</td><td>Crypto</td><td>Phemex</td><td>135</td><td>15m</td><td>None</td><td>4b (60m)</td><td>Evolved 0.5R + Trail 0.3R</td><td>20x</td><td>$6k</td><td>No</td><td class="d">22 mar</td></tr>
+        <tr><td class="strat-name">ZCT Spike 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>0.51</td><td>1b LO</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td><td class="d">22 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT 1m TS V2</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>2.0</td><td>EoO=8</td><td>Trigger 0.1R, Trail 0.1R</td><td>20x</td><td>$1k</td><td>No</td><td class="d">1 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT 1m LO</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>1.5</td><td>None</td><td>Limit Order entry</td><td>20x</td><td>$1k</td><td>No</td><td class="d">1 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT 1m Reversal</td><td>Crypto</td><td>Phemex</td><td>119</td><td>1m</td><td>1.0</td><td>None</td><td>Reversal LO entry</td><td>20x</td><td>$5k</td><td>No</td><td class="d">5 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT 1m BO Sharp</td><td>Crypto</td><td>Phemex</td><td>119</td><td>1m</td><td>1.0</td><td>None</td><td>SHORT only MO, crossovers&lt;=2</td><td>20x</td><td>$5k</td><td>No</td><td class="d">5 apr</td></tr>
+        <tr><td class="strat-name">ZCT V2 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>0.51</td><td>1b LO</td><td>S/R</td><td>20x</td><td>$1k</td><td>No</td><td class="d">22 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO OC Top28</td><td>Crypto</td><td>Top 28 coins</td><td>28</td><td>30m</td><td>5.0</td><td>16b (8h)</td><td>BTC macro, MO entry</td><td>20x</td><td>$5k</td><td>No</td><td class="d">3 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO OC Strong65</td><td>Crypto</td><td>Strong 65 coins</td><td>65</td><td>30m</td><td>5.0</td><td>16b (8h)</td><td>BTC macro, MO entry</td><td>20x</td><td>$5k</td><td>No</td><td class="d">3 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">MOMO OC GO</td><td>Crypto</td><td>All coins</td><td>100+</td><td>30m</td><td>5.0</td><td>16b (8h)</td><td>BTC macro, MO entry</td><td>20x</td><td>$5k</td><td>No</td><td class="d">3 apr</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT Wide 30m</td><td>Crypto</td><td>22 proven coins</td><td>22</td><td>30m</td><td>0.5</td><td>2b (1h)</td><td>Trail 0.5R/0.3R + BTC macro</td><td>20x</td><td>$5k</td><td>No</td><td class="d">3 apr</td></tr>
+        <tr><td class="strat-name">ZCT MR 15m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>15m</td><td>2.0</td><td>4 bars</td><td>Reversal</td><td>20x</td><td>$10k</td><td>No</td><td class="d">25 mar</td></tr>
+        <tr><td class="strat-name">ZCT MR 1m</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>1m</td><td>2.0</td><td>8 bars</td><td>Reversal</td><td>20x</td><td>$10k</td><td>No</td><td class="d">25 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT V2 Base</td><td>Crypto</td><td>8 MR coins</td><td>8</td><td>1m</td><td>MR SHORT</td><td>TS=60</td><td>S/R</td><td>5x</td><td>$1k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr class="new-build"><td class="strat-name">ZCT V2 Funding</td><td>Crypto</td><td>8 MR coins</td><td>8</td><td>1m</td><td>MR SHORT</td><td>TS=60</td><td>Spike + Funding>0</td><td>5x</td><td>$1k</td><td>No</td><td class="d">31 mar</td></tr>
+        <tr><td class="strat-name">ZCT V2 Logger</td><td>Crypto</td><td>Phemex</td><td>135</td><td>1m</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>Observe</td><td>No</td><td class="d">-</td></tr>
+        <tr><td class="strat-name">ZCT Signal Logger</td><td>Crypto</td><td>Phemex</td><td>80+</td><td>1m</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>Observe</td><td>No</td><td class="d">-</td></tr>
+        <tr><td class="strat-name">PORT10K</td><td>Crypto</td><td>Mixed</td><td>58</td><td>Multi</td><td>Varied</td><td>Varied</td><td>Varied</td><td>4-20x</td><td>$50k</td><td>No</td><td class="d">20 mar</td></tr>
       </tbody>
     </table>
     </div>
@@ -277,7 +278,7 @@ const STOPPED_PREFIXES = [
   'zct_1m_paper','zct_paper_40x','zct_live','zct_1m_ts_live',
   'zct_spike_1m_075','zct_spike_1m_100',
   'zct_v2_1m_075','zct_v2_1m_100',
-  'zct_alpha_1m','zct_wide_1m','zct_wide_15m',
+  'zct_alpha_1m','zct_wide_1m','zct_wide_15m','zct_1m_market',
   // MOMO gestopt
   'momo_v4_eu','momo_v4_asia',
 ];
@@ -332,6 +333,15 @@ function pr(v) {
   return v >= 1000 ? v.toFixed(2) : v >= 1 ? v.toFixed(4) : v.toFixed(6);
 }
 function cls(v) { return v > 0 ? 'g' : v < 0 ? 'r' : 'd'; }
+function fmtDateTime(iso) {
+  if (!iso) return '-';
+  const d = new Date(iso);
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const hh = String(d.getHours()).padStart(2, '0');
+  const mi = String(d.getMinutes()).padStart(2, '0');
+  return dd + '/' + mm + ' ' + hh + ':' + mi;
+}
 function parseExtra(t) {
   if (!t.extra) return {};
   try { return typeof t.extra === 'string' ? JSON.parse(t.extra) : t.extra; }
@@ -387,6 +397,8 @@ const SPEC_TO_KEY = {
   'MOMO OC Top28': 'momo_opt_crypto_top28',
   'MOMO OC Strong65': 'momo_opt_crypto_strong65',
   'MOMO OC GO': 'momo_opt_crypto_go',
+  'ZCT 1m Reversal': 'zct_1m_reversal',
+  'ZCT 1m BO Sharp': 'zct_1m_bo_sharp',
   'ZCT Wide 30m': 'zct_wide_30m',
   'ZCT Wide 15m': 'zct_wide_15m',
   'ZCT Wide 1m': 'zct_wide_1m',
@@ -917,7 +929,7 @@ async function loadPerformance() {
   }
 
   // Detect live strategies
-  const liveStrats = new Set(['momo_opt_live', 'momo_opt_live_eu', 'zct_alpha_live', 'trend_flip']);
+  const liveStrats = new Set(['momo_opt_live', 'momo_opt_live_eu', 'momo_opt_midcap_live', 'zct_alpha_live', 'trend_flip']);
 
   // Build sortable data
   // Actieve bots: genereer uit SPEC_TO_KEY + bekende profielen
@@ -932,6 +944,7 @@ async function loadPerformance() {
     'momo_opt_v2_us','momo_opt_v2_eu','momo_opt_v2_asia',
     'momo_comp_us','momo_comp_eu','momo_v4_us',
     'momo_opt_midcap','ffr_us','ffr_midcap',
+    'momo_opt_crypto_top28','momo_opt_crypto_strong65','momo_opt_crypto_go',
   ]);
   const activeBots = [];
   for (const key of Object.values(SPEC_TO_KEY)) {
@@ -960,6 +973,9 @@ async function loadPerformance() {
   });
   window._stratSortCol = null;
   window._stratSortAsc = false;
+  window._perfFilterTF = '';
+  window._perfFilterMode = '';
+  window._perfFilterStrat = '';
   renderStratTable();
 
   // Daily PnL table (clickable)
@@ -1003,11 +1019,83 @@ async function loadPerformance() {
   renderSymTable(worstSyms, 'Bottom 25 Symbols', 'pf-symbols-worst');
 }
 
+function detectTF(key) {
+  if (key.includes('_1m')) return '1m';
+  if (key.includes('_3m')) return '3m';
+  if (key.includes('_5m')) return '5m';
+  if (key.includes('_15m')) return '15m';
+  if (key.includes('_1h') || key.includes('_eq3')) return '1H';
+  if (key.includes('_4h')) return '4H';
+  if (key.includes('_1d') || key.includes('csmom') || key.includes('volregime')) return '1D';
+  if (key.includes('momo_opt') || key.includes('momo_v3') || key.includes('momo_v4') || key.includes('momo_comp')) return '1H';
+  if (key.includes('momo_eq')) return '15m';
+  if (key.includes('ffr_midcap')) return '15m';
+  if (key.includes('ffr_us')) return '1H';
+  if (key.includes('port10k')) return 'Multi';
+  if (key.includes('trend_flip')) return '1m';
+  if (key.includes('_30m') || key.includes('wide_30m')) return '30m';
+  return '-';
+}
+
+function detectBaseStrat(key) {
+  if (key.startsWith('momo_opt_crypto') || key.startsWith('momo_oc')) return 'MOMO OC';
+  if (key.startsWith('momo_opt_midcap') || key.startsWith('momo_mc')) return 'MOMO MC';
+  if (key.startsWith('momo_opt_combined')) return 'MOMO Combined';
+  if (key.startsWith('momo_opt_v2')) return 'MOMO OPT V2';
+  if (key.startsWith('momo_opt_live')) return 'MOMO OPT LIVE';
+  if (key.startsWith('momo_opt')) return 'MOMO OPT';
+  if (key.startsWith('momo_comp')) return 'MOMO COMP';
+  if (key.startsWith('momo_eq_v2')) return 'MOMO EQ V2';
+  if (key.startsWith('momo_eq')) return 'MOMO EQ';
+  if (key.startsWith('momo_v4')) return 'MOMO V4';
+  if (key.startsWith('momo_v3')) return 'MOMO V3';
+  if (key.startsWith('momo')) return 'MOMO';
+  if (key.startsWith('zct_1m')) return 'ZCT 1m';
+  if (key.startsWith('zct_wide')) return 'ZCT Wide';
+  if (key.startsWith('zct_mr')) return 'ZCT MR';
+  if (key.startsWith('zct_spike')) return 'ZCT Spike';
+  if (key.startsWith('zct_alpha')) return 'ZCT Alpha';
+  if (key.startsWith('zct_v2')) return 'ZCT V2';
+  if (key.startsWith('zct')) return 'ZCT';
+  if (key.startsWith('ffr')) return 'FFR';
+  if (key.startsWith('csmom')) return 'CS-MOM';
+  if (key.startsWith('volregime')) return 'VolRegime';
+  if (key.startsWith('trend_flip')) return 'Trend FLIP';
+  if (key.startsWith('port10k')) return 'PORT10K';
+  return key;
+}
+
+function onPerfFilter() {
+  window._perfFilterTF = document.getElementById('pf-filter-tf').value;
+  window._perfFilterMode = document.getElementById('pf-filter-mode').value;
+  window._perfFilterStrat = document.getElementById('pf-filter-strat').value;
+  renderStratTable();
+}
+
 function renderStratTable() {
   const data = window._stratData || [];
   const col = window._stratSortCol;
 
+  // Enrich with TF and base strat
+  for (const d of data) {
+    if (!d._tf) d._tf = detectTF(d.key);
+    if (!d._base) d._base = detectBaseStrat(d.key);
+  }
+
+  // Build strategy filter options
+  const allBases = [...new Set(data.map(d => d._base))].sort();
+
   let sorted = [...data];
+
+  // Apply filters
+  const fTF = window._perfFilterTF || '';
+  const fMode = window._perfFilterMode || '';
+  const fStrat = window._perfFilterStrat || '';
+  if (fTF) sorted = sorted.filter(d => d._tf === fTF);
+  if (fMode === 'LIVE') sorted = sorted.filter(d => d.live);
+  if (fMode === 'paper') sorted = sorted.filter(d => !d.live);
+  if (fStrat) sorted = sorted.filter(d => d._base === fStrat);
+
   if (col) {
     sorted.sort((a, b) => window._stratSortAsc ? a[col] - b[col] : b[col] - a[col]);
   } else {
@@ -1018,24 +1106,18 @@ function renderStratTable() {
   const th = (label, key, align) =>
     '<th style="cursor:pointer;' + (align || '') + '" onclick="sortStrats(\'' + key + '\')">' + label + arrow(key) + '</th>';
 
-  function detectTF(key) {
-    if (key.includes('_1m')) return '1m';
-    if (key.includes('_3m')) return '3m';
-    if (key.includes('_5m')) return '5m';
-    if (key.includes('_15m')) return '15m';
-    if (key.includes('_1h') || key.includes('_eq3')) return '1H';
-    if (key.includes('_4h')) return '4H';
-    if (key.includes('_1d') || key.includes('csmom') || key.includes('volregime')) return '1D';
-    if (key.includes('momo_opt') || key.includes('momo_v3') || key.includes('momo_v4') || key.includes('momo_comp')) return '1H';
-    if (key.includes('momo_eq')) return '15m';
-    if (key.includes('ffr_midcap')) return '15m';
-    if (key.includes('ffr_us')) return '1H';
-    if (key.includes('port10k')) return 'Multi';
-    if (key.includes('trend_flip')) return '1m';
-    return '-';
-  }
-
+  // Filter bar
   let shtml = '<div style="font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Per Strategy</div>' +
+    '<div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">' +
+    '<select id="pf-filter-tf" onchange="onPerfFilter()"><option value="">All TF</option>' +
+    ['1m','15m','30m','1H','1D','Multi'].map(v => '<option value="' + v + '"' + (fTF === v ? ' selected' : '') + '>' + v + '</option>').join('') +
+    '</select>' +
+    '<select id="pf-filter-mode" onchange="onPerfFilter()"><option value="">All Modes</option>' +
+    '<option value="LIVE"' + (fMode === 'LIVE' ? ' selected' : '') + '>LIVE</option>' +
+    '<option value="paper"' + (fMode === 'paper' ? ' selected' : '') + '>paper</option></select>' +
+    '<select id="pf-filter-strat" onchange="onPerfFilter()"><option value="">All Strategies</option>' +
+    allBases.map(v => '<option value="' + v + '"' + (fStrat === v ? ' selected' : '') + '>' + v + '</option>').join('') +
+    '</select></div>' +
     '<div style="overflow-x:auto"><table><thead><tr>' +
     '<th>Strategy</th><th>Mode</th><th>TF</th>' +
     th('Trades', 'n') + th('WR', 'wr') + th('PnL', 'pnl', 'text-align:right') +
@@ -1045,11 +1127,10 @@ function renderStratTable() {
   for (const d of sorted) {
     const mode = d.live ? '<span style="color:var(--red);font-weight:600">LIVE</span>' : '<span style="color:var(--dim)">paper</span>';
     const pfStr = d.pf >= 999 ? '-' : d.pf.toFixed(2);
-    const tf = detectTF(d.key);
     shtml += '<tr style="cursor:pointer" onclick="toggleStratTrades(\'' + d.key.replace(/'/g, "\\'") + '\')">' +
       '<td><span class="badge">' + shortName(d.key) + '</span></td>' +
       '<td>' + mode + '</td>' +
-      '<td style="color:var(--dim)">' + tf + '</td>' +
+      '<td style="color:var(--dim)">' + d._tf + '</td>' +
       '<td>' + d.n + '</td><td>' + d.wr.toFixed(0) + '%</td>' +
       '<td style="text-align:right" class="' + cls(d.pnl) + '">' + usd0(d.pnl) + '</td>' +
       '<td class="' + cls(d.avg) + '">' + usd(d.avg) + '</td>' +
@@ -1096,7 +1177,7 @@ function showStratTrades(stratPrefix) {
     const exitR = (t.action || '').replace('CLOSE_', '');
     const ec = exitR.includes('TP') ? 'var(--green)' : exitR.includes('SL') ? 'var(--red)' : 'var(--yellow)';
     const profile = (t.strategy || '').includes('_safe') ? 'S' : (t.strategy || '').includes('_balanced') ? 'B' : (t.strategy || '').includes('_aggressive') ? 'A' : '-';
-    html += '<tr><td class="d">' + rel(t.created_at) + '</td>' +
+    html += '<tr><td class="d">' + fmtDateTime(t.created_at) + '</td>' +
       '<td style="font-weight:500">' + (t.symbol || '-') + '</td>' +
       '<td style="color:' + dc + ';font-weight:600">' + dir + '</td>' +
       '<td style="color:' + ec + '">' + exitR + '</td>' +
@@ -1187,7 +1268,7 @@ async function toggleSpecTrades(el) {
   if (!filtered.length) {
     const tr = document.createElement('tr');
     tr.className = 'specs-trades';
-    tr.innerHTML = '<td colspan="11" style="color:var(--dim);padding:8px 12px">No closed trades yet</td>';
+    tr.innerHTML = '<td colspan="12" style="color:var(--dim);padding:8px 12px">No closed trades yet</td>';
     row.after(tr);
     return;
   }
@@ -1197,7 +1278,7 @@ async function toggleSpecTrades(el) {
   const wins = filtered.filter(t => t.pnl > 0).length;
   const wr = (wins / filtered.length * 100).toFixed(0);
 
-  let html = '<td colspan="11" style="padding:8px 12px">' +
+  let html = '<td colspan="12" style="padding:8px 12px">' +
     '<div style="display:flex;gap:16px;margin-bottom:6px;font-size:10px">' +
     '<span>' + filtered.length + ' trades</span>' +
     '<span>WR: ' + wr + '%</span>' +
@@ -1213,7 +1294,7 @@ async function toggleSpecTrades(el) {
     const exitR = (t.action || '').replace('CLOSE_', '');
     const ec = exitR.includes('TP') ? 'var(--green)' : exitR.includes('SL') ? 'var(--red)' : 'var(--yellow)';
     const prof = (t.strategy||'').includes('_safe') ? 'S' : (t.strategy||'').includes('_balanced') ? 'B' : (t.strategy||'').includes('_aggressive') ? 'A' : '-';
-    html += '<tr><td class="d">' + rel(t.created_at) + '</td>' +
+    html += '<tr><td class="d">' + fmtDateTime(t.created_at) + '</td>' +
       '<td style="font-weight:500">' + (t.symbol||'-') + '</td>' +
       '<td style="color:' + dc + ';font-weight:600">' + dir + '</td>' +
       '<td style="color:' + ec + '">' + exitR + '</td>' +
